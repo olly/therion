@@ -1,0 +1,15 @@
+name: Continuous Integration (macOS)
+on: [push]
+
+jobs:
+  build:
+    name: Build on macOS
+    runs-on: macOS-latest
+    steps:
+        - uses: actions/checkout@v1
+        - name: install dependencies
+          run: brew install pkg-config proj
+        - name: make config-macosx
+          run: make config-macosx
+        - name: make therion
+          run: make therion
