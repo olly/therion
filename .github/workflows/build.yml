@@ -10,7 +10,7 @@ jobs:
       - name: install dependencies
         run: sudo apt-get install -y libproj-dev
       - name: make config-linux
-        run: make config-linux
+        run: make config-debian
       - name: make therion
         run: make therion
   macos:
